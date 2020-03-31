@@ -1,0 +1,7 @@
+
+/* @import는 css파일 내부에서 다른 css파일을 불러 올 수 있음.  */
+@charset "UTF-8";
+@import "main.css";
+h1{
+	color: #f00;
+}
