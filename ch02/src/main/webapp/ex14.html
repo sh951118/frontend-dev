@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p {
+  		position: absolute;
+ 		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+		margin: 0;
+  		color: #3498db;
+  		font-size: 80px;
+  		font-family: 'Open Sans', sans-serif;
+  		font-weight: 700;
+  		text-transform: uppercase;
+  		white-space: nowrap;
+		}
+p::before {
+		background-color:#3498db;
+  		position: absolute;
+ 		top: 0;
+  		left: 0;
+  		content: attr(data-split);
+  		height: 50%;
+  		color: #fff;
+  		overflow: hidden;
+		}
+
+	input { background-color: #fff;
+			  border: 2px solid #03C75A; 
+			  outline: none 
+		  }
+	input#user-id			{ background-color: #EB9095 }
+	input#user-id.focused	{ background-color: #E1E6F6 }
+</style>
+<script>
+	function changeBackground(input, className){
+		input.className=className;
+	}
+</script>
+</head>
+<body>
+
+	<form>
+		<input type='text' 
+			   onfocus='changeBackground(this, "focused");' 
+			   onBlur='changeBackground(this, "");'
+			   id='user-id'/>
+		<br/>
+		<input type='password' name="password"/>
+		<p data-split="DOUZONE">DOUZONE</p><br/>
+	</form>
+</body>
+</html>
