@@ -25,8 +25,8 @@ JavaScript 이벤트 종류
 		element.onclick = function() {....}
 		-> 문제점 : 이벤트 처리 핸들러를 하나밖에 세팅하지 못한다는 단점.
 		
-	- DOM Event Model Level(2)
-		(1.) Microsoft Internet Explorer : attachEvent, detachEvent
+	- DOM Event Model Level(2) -> 멀티 핸들러가 가능하다.
+		(1.) Microsoft Internet Explorer(<=8버젼) : attachEvent, detachEvent
 		(2.) Standar Event Mode : addEventListener, removeEventListener
 		
 		//Native(pure, vanilla) JavaScript
@@ -37,11 +37,13 @@ JavaScript 이벤트 종류
 			element.addEventListener("click", function(){...});
 		}
  */
+ 
+//옵저버 패턴
 window.addEventListener("load", function(){
 	document.getElementById("header-1").onclick = function() {
 		console.log("Event Model 0 - Basic");
 	}
-	// 옵저버 패턴
+	
 	document.getElementById("header-2").addEventListener("click", function() {
 		console.log("Event Model 2");
 	});
