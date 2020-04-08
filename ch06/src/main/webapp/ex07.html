@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.addEventListener("load", function(){
+	var html = "<h1>Hello DOM</h1>";
+	
+	setTimeout(function() {
+		document.body.innerHTML += html;	// ex06보다 더 상위 메소드(innerHTML)
+	}, 1000);								// +=하지 않으면 페이지 전체가 바뀜. 그럼으로 글을 추가 하고 싶은 경우 innerHTML에 추가로 넣어 주어야 함.
+});
+</script>
+</head>
+<body>
+	<h1>HTMLElement 만들기 02</h1>
+</body>
+</html>

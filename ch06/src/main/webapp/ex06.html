@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.addEventListener("load", function(){
+	var h1Element = document.createElement('h1');
+	var textNode = document.createTextNode('Hello DOM');
+	
+	h1Element.append(textNode);				// h1Element와 textNode를 연결.
+	
+	setTimeout(function() {
+		document.body.appendChild(h1Element);	// appendChild를 통해 body에 그려줌(이 부분이 있어야 비로소 연결이 됨.)
+	}, 1000);									// 시간을 넣어서 확인
+	
+});
+</script>
+</head>
+<body>
+	<h1>HTMLElement 만들기 01</h1>
+</body>
+</html>
