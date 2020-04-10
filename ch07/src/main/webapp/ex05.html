@@ -4,21 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script type="text/javascript" src="jquery/jquery-3.4.1.js"></script>
 <script type="text/javascript">
+// 선택자 - 태그
 $(function() {
 	setTimeout(function() {
-		$("li:nth-child(3), li:nth-child(5)").remove();
+		$('li').css('color', 'red');
 	}, 2000);
 });
 </script>
 </head>
 <body>
 	<ul>
-		<li>1번째</li>
-		<li>2번째</li>
-		<li>3번째</li>
-		<li>4번째</li>
-		<li>5번째</li>
-		<li>6번째</li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 	</ul>
 </body>
 </html>
